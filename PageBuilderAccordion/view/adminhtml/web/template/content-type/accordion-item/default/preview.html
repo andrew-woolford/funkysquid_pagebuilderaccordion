@@ -1,0 +1,24 @@
+<!--
+/**
+ * Copyright © Funky Squid Labs Ltd. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<div class="pagebuilder-content-type pagebuilder-accordion-item type-nested"
+     attr="data.main.attributes"
+     ko-style="data.main.style"
+     css="data.main.css"
+     event="{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false">
+    <div class="pagebuilder-content-container">
+        <div class="placeholder-readmore-text" if="data.title.html">
+            <div data-role="title">
+                <h3 html="data.title.html"></h3>
+            </div>
+            <div data-role="content">
+                <div html="data.description.html"></div>
+            </div>
+        </div>
+    </div>
+    <div class="placeholder-accordion-item-empty" ifnot="data.title.html" translate="'Enter your content'"></div>
+    <render args="getOptions().template"></render>
+</div>

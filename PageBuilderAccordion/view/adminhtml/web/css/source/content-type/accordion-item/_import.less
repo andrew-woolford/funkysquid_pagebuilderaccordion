@@ -1,0 +1,74 @@
+// -------------------------------------------------------
+// Copyright © Funky Squid Labs Ltd. All rights reserved.
+// See COPYING.txt for license details.
+// -------------------------------------------------------
+
+//
+//  Default appearance styles.
+//  _____________________________________________
+// Required when using a custom SVG icon for your content type in the Page Builder panel
+.icon-pagebuilderreadmore {
+    //content: url('@{baseDir}FunkySquid_PageBuilderReadMore/css/images/content-type/funkysquid-pagebuilderreadmore/appearance/icon-pagebuilderreadmore.svg');
+    width: 16px;
+    height: 16px;
+    margin-bottom: -2px;
+    margin-left: 1px;
+}
+
+// Admin styles
+.pagebuilder-content-type {
+    .pagebuilder-column-group {
+        &.no-column-line {
+            .element-children {
+                display: block;
+            }
+        }
+    }
+}
+.pagebuilder-accordion {
+    position: relative;
+    .mage-accordion-disabled {
+        padding-top: 25px;
+        border: 1px solid #e8e8e8;
+        &:before {
+            position: absolute;
+            top: 3px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            content: 'Accordion';
+        }
+    }
+}
+.pagebuilder-content-type {
+    &.pagebuilder-accordion-item {
+        border-top: 1px solid #e8e8e8;
+        .placeholder-accordion-item-empty {
+            position: relative;
+            display: flex;
+            height: 60px;
+            align-items: center;
+            justify-content: center;
+            background-color: #fafafa;
+            color: #aaa6a0;
+        }
+        .pagebuilder-options {
+            &.pagebuilder-options-middle {
+                right: 50%;
+                transform: translate(50%, -50%);
+            }
+        }
+        .placeholder-readmore-text {
+            padding: 0 20px 8px;
+        }
+    }
+    &.children-min-height {
+        > div > .element-children {
+            padding: 0;
+            min-height: unset;
+        }
+    }
+}

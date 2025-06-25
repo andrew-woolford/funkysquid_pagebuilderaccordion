@@ -1,0 +1,17 @@
+{
+    "name": "funkysquid/pagebuilder-accordion",
+    "description": "PageBuilder Accordion module",
+    "version": "1.0.16",
+    "type": "magento2-module",
+    "license": [
+        "proprietary"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "FunkySquid\\PageBuilderAccordion\\": ""
+        }
+    }
+}

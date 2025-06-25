@@ -1,0 +1,65 @@
+// Variables:
+@border-colour: #f2f2f2;
+
+//
+//  Accordion styles
+//  _____________________________________________
+& when (@media-common = true) {
+    ul {
+        &[data-content-type="accordion"] {
+            position: relative;
+            width: 100%;
+            margin: 25px 0 0 0;
+            padding: 0;
+            list-style-type: none;
+            li {
+                &[data-content-type="accordion-item"] {
+                    position: relative;
+                    padding: 0;
+                    margin: 0;
+                    details {
+                        margin-bottom: 25px;
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid @border-colour;
+                        &[open] {
+                            padding-bottom: 0;
+                            summary {
+                                &:after {
+                                    content: "\e621";
+                                }
+                            }
+                        }
+                        summary {
+                            font-size: 20px;
+                            font-weight: 600;
+                            line-height: 34px;
+                            cursor: pointer;
+                            &::-webkit-details-marker {
+                                display: none;
+                                @media speech {
+                                    display: inline-block;
+                                }
+                            }
+                            &:after {
+                                position: absolute;
+                                top: 2px;
+                                right: 0;
+                                margin-left: 10px;
+                                font-family: 'icons-blank-theme';
+                                font-size: 40px;
+                                font-weight: normal;
+                                -webkit-font-smoothing: antialiased;
+                                -moz-osx-font-smoothing: grayscale;
+                                content: "\e622";
+                            }
+                        }
+                        [data-element="description"] {
+                            margin-top: 15px;
+                            padding: 0 0 25px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
