@@ -1,9 +1,8 @@
-#Funky Squids Page Builder Accordion Module.
+# Funky Squids Page Builder Accordion Module.
 
 -----
 
 ## funkysquid_pagebuilderaccordion
-
 
 This module is a accordion module which uses the details & summary html tags and is fully accessible.
 
