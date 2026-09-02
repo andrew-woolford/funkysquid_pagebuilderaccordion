@@ -7,8 +7,9 @@
 This module is a accordion module which uses the details & summary html tags and is fully accessible.
 
 > [!IMPORTANT]
-> Create a folder inside app/code called **FunkySquid** and place the module in there or it won't work.
-> Run the usual Magento commands to activate the module. 
+> Open the main folder after cloned/copied and open the main folder and Create a folder inside app/code called FunkySquid
+>  and place the inner folder for the module in there or it won't work. Like this: app/code/FunkySquid/PageBuilderAccordion
+>  Run the usual Magento commands to activate the module.
 
 **Usage:**
 
