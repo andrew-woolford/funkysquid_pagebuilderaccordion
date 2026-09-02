@@ -7,9 +7,7 @@
 & when (@media-common = true) {
     ul {
         &[data-content-type="accordion"] {
-            position: relative;
-            width: 100%;
-            margin: 25px 0 0 0;
+            margin-block-start: 25px;
             padding: 0;
             list-style-type: none;
             li {
@@ -18,44 +16,63 @@
                     padding: 0;
                     margin: 0;
                     details {
-                        margin-bottom: 25px;
-                        padding-bottom: 20px;
-                        border-bottom: 1px solid @border-colour;
+                        margin-block-end: 20px;
+                        padding-block-end: 20px;
+                        border-block-end: 1px solid @border-colour;
+
                         &[open] {
                             padding-bottom: 0;
+
                             summary {
-                                &:after {
-                                    content: "\e621";
+                                &::before {
+                                    transform: translate(-50%, -50%) rotate(450deg);
                                 }
                             }
                         }
+
                         summary {
+                            position: relative;
+                            padding-right: 30px;
                             font-size: 20px;
-                            font-weight: 600;
-                            line-height: 34px;
+                            line-height: 28px;
                             cursor: pointer;
+                            list-style: none;
+
                             &::-webkit-details-marker {
                                 display: none;
+
                                 @media speech {
                                     display: inline-block;
                                 }
                             }
-                            &:after {
+
+                            &::before,
+                            &::after {
+                                content: "";
                                 position: absolute;
-                                top: 2px;
+                                top: 50%;
+                                background-color: currentColor;
+                                transition: transform 0.3s ease;
+                            }
+
+                            &::after {
                                 right: 0;
-                                margin-left: 10px;
-                                font-family: 'icons-blank-theme';
-                                font-size: 40px;
-                                font-weight: normal;
-                                -webkit-font-smoothing: antialiased;
-                                -moz-osx-font-smoothing: grayscale;
-                                content: "\e622";
+                                width: 16px;
+                                height: 2px;
+                                transform: translate(-50%, -50%);
+                            }
+
+                            &::before {
+                                right: 14px;
+                                width: 2px;
+                                height: 16px;
+                                transform: translate(-50%, -50%) rotate(0deg);
                             }
                         }
+
                         [data-element="description"] {
-                            margin-top: 15px;
-                            padding: 0 0 25px 0;
+                            margin-block-start: 15px;
+                            padding-block-end: 15px;
                         }
                     }
                 }
