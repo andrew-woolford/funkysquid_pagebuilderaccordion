@@ -14,7 +14,7 @@ This module is a accordion module which uses the details & summary html tags and
 
 * Open a CMS page or content area
 * View page builder section
-* Expand Funky SQuid menu at the bottom
+* Expand Funky Squid menu at the bottom
 * Drag content type into the content area
 * Update with your content or images
 * Save updates
