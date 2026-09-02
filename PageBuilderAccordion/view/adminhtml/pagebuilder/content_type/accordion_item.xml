@@ -1,12 +1,23 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
-    <type name="accordion-item" label="Accordion Item" component="Magento_PageBuilder/js/content-type-collection" preview_component="FunkySquid_PageBuilderAccordion/js/content-type/accordion-item/preview" form="pagebuilder_accordion_item_form" menu_section="funkysquid" icon="icon-pagebuilder-accordion" sortOrder="25" translate="label">
+    <type name="accordion-item"
+          label="Accordion Item"
+          component="Magento_PageBuilder/js/content-type-collection"
+          preview_component="FunkySquid_PageBuilderAccordion/js/content-type/accordion-item/preview"
+          form="pagebuilder_accordion_item_form"
+          menu_section="funkysquid"
+          icon="icon-pagebuilder-accordion"
+          sortOrder="25"
+          translate="label">
         <parents default_policy="deny">
             <parent name="accordion" policy="allow"/>
         </parents>
         <children default_policy="deny"/>
         <appearances>
-            <appearance name="default" default="true" preview_template="FunkySquid_PageBuilderAccordion/content-type/accordion-item/default/preview" master_template="FunkySquid_PageBuilderAccordion/content-type/accordion-item/default/master" reader="Magento_PageBuilder/js/master-format/read/configurable">
+            <appearance name="default" default="true"
+                        preview_template="FunkySquid_PageBuilderAccordion/content-type/accordion-item/default/preview"
+                        master_template="FunkySquid_PageBuilderAccordion/content-type/accordion-item/default/master"
+                        reader="Magento_PageBuilder/js/master-format/read/configurable">
                 <elements>
                     <element name="main">
                         <style name="text_align" source="text_align"/>

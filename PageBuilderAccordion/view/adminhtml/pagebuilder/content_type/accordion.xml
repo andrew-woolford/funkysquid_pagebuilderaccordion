@@ -1,6 +1,15 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
-    <type name="accordion" label="Accordion" component="Magento_PageBuilder/js/content-type-collection" preview_component="FunkySquid_PageBuilderAccordion/js/content-type/accordion/preview" master_component="Magento_PageBuilder/js/content-type/master-collection" form="pagebuilder_accordion_form" menu_section="funkysquid" icon="icon-pagebuilder-accordion" sortOrder="20" translate="label">
+    <type name="accordion"
+          label="Accordion"
+          component="Magento_PageBuilder/js/content-type-collection"
+          preview_component="FunkySquid_PageBuilderAccordion/js/content-type/accordion/preview"
+          master_component="Magento_PageBuilder/js/content-type/master-collection"
+          form="pagebuilder_accordion_form"
+          menu_section="funkysquid"
+          icon="icon-pagebuilder-accordion"
+          sortOrder="20"
+          translate="label">
         <parents default_policy="deny">
             <parent name="row" policy="allow"/>
             <parent name="column" policy="allow"/>
